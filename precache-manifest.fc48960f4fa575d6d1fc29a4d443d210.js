@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18fbdece493b3ef94eae97d42dfbdf1c",
+    "revision": "04e4214478f396a85f534798727cd272",
     "url": "/ReactNews./index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactNews./static/css/2.8fd11fc7.chunk.css"
   },
   {
-    "revision": "c99312c2410b4afb0391",
+    "revision": "2f9e2f0b24e9e577c074",
     "url": "/ReactNews./static/css/main.b4d450cc.chunk.css"
   },
   {
@@ -20,12 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactNews./static/js/2.e8659067.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c99312c2410b4afb0391",
-    "url": "/ReactNews./static/js/main.fb12e22d.chunk.js"
+    "revision": "2f9e2f0b24e9e577c074",
+    "url": "/ReactNews./static/js/main.7de99f1c.chunk.js"
   },
   {
     "revision": "af8f3946c8050f2c0a30",
     "url": "/ReactNews./static/js/runtime-main.af3f9fc6.js"
+  },
+  {
+    "revision": "f43f7b8888a45c08aa80d466c6483599",
+    "url": "/ReactNews./static/media/loading.f43f7b88.gif"
   },
   {
     "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
