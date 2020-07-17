@@ -1,0 +1,43 @@
+.tech-article {
+  border-radius: 6px;
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.tech-article:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 5px 2rem rgba(0, 0, 0, 0.2);
+}
+
+.tech-image {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 5px;
+}
+
+.textBlock {
+  padding: 15px;
+}
+
+.tech-source {
+  font-size: 1rem;
+}
+
+.tech-title {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.tech-article:hover .tech-title {
+  font-weight: 900;
+}
+
+.tech-title:hover {
+  text-decoration: none;
+  color: black;
+}

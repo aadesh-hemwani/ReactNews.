@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.articlesBlock2 {
+  margin-top: 30px;
+}
+.top__trending {
+  width: 97%;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  padding-left: 16px;
+}
+
+.title__tech {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.title__underline {
+  width: 25rem;
+  height: 2px;
+  background-color: gray;
+}
+
+@media (max-width: 711px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title__underline {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid-container {
+    display: block;
+    grid-template-columns: 0;
+    padding: 10px;
+  }
+}
+
+.row {
+  margin: 0px;
+}

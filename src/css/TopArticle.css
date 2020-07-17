@@ -1,0 +1,132 @@
+.loadingDiv {
+  text-align: center;
+}
+
+.loadingTop {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+  width: 5%;
+}
+
+.loadingText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.top-articles {
+  width: 95%;
+  height: 11.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.article1,
+.article2,
+.article3,
+.article4 {
+  position: relative;
+  width: 20rem;
+  height: 100%;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.top__source {
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.top__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  color: white;
+  bottom: 50%;
+  transform: translateY(50%);
+  margin-left: 5px;
+  backface-visibility: hidden;
+  text-decoration: none;
+  text-shadow: 0rem 2px 2px black;
+  transition: 0.2s;
+}
+
+.article1:hover .top__title,
+.article2:hover .top__title,
+.article3:hover .top__title,
+.article4:hover .top__title {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0rem 2px 8px black;
+}
+
+.top__image {
+  position: absolute;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.color1,
+.color2,
+.color3,
+.color4 {
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(144, 201, 248),
+    rgb(247, 122, 122)
+  );
+  opacity: 0.75;
+  border-radius: 4px;
+}
+
+.color2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(123, 253, 123),
+    rgb(144, 201, 248)
+  );
+}
+
+.color3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(247, 122, 122),
+    rgb(144, 201, 248)
+  );
+}
+
+.color4 {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(235, 235, 118),
+    rgb(247, 122, 122)
+  );
+}
+
+@media (min-width: 1360px) {
+  .top__image {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .top__image {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .top__title {
+    font-size: 1.2rem;
+  }
+}
