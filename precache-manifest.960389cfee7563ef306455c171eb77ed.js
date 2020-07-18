@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5748ef457eecb8785fb4450ab99153da",
+    "revision": "0e93749f5b0b7198b8c64cc31caeb7c2",
     "url": "/ReactNews./index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactNews./static/css/2.8fd11fc7.chunk.css"
   },
   {
-    "revision": "df3bcd07ff0860f4f3d9",
-    "url": "/ReactNews./static/css/main.e774d539.chunk.css"
+    "revision": "2d1b56759780e2532f83",
+    "url": "/ReactNews./static/css/main.b859368f.chunk.css"
   },
   {
     "revision": "83c34c92c167e59f1956",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactNews./static/js/2.ac2efe1f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df3bcd07ff0860f4f3d9",
-    "url": "/ReactNews./static/js/main.204b3589.chunk.js"
+    "revision": "2d1b56759780e2532f83",
+    "url": "/ReactNews./static/js/main.0c8d8aca.chunk.js"
   },
   {
     "revision": "af8f3946c8050f2c0a30",
