@@ -10,7 +10,7 @@ export default class Articles extends Component {
           alt="Not Available"
         />
         <div className="textBlock">
-          <div className="tech-source">{this.props.source}</div>
+          <div className="tech-source">{this.props.category}</div>
           <br />
           <a className="tech-title" href={this.props.url}>
             {this.props.title}

@@ -20,21 +20,44 @@ export default class App extends Component {
       articles: [],
       techArticles: [],
       countryArticles: [],
-      trending: [],
+      worldArticles: [],
+      searchArticles: [],
       isLoaded: false,
     };
     this.url =
-      "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=b64e0e0376d04458b78457b0c373a1cb";
+      "https://api.currentsapi.services/v1/search?keywords=trending&language=en&apiKey=vkZ1vXT3ejn5kyNxVaW23l6Lc4J_xchkBNxGYoFAIdHP5x2b";
 
     this.techArticlesUrl =
-      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b64e0e0376d04458b78457b0c373a1cb";
+      "https://api.currentsapi.services/v1/search?keywords=technology&language=en&apiKey=vkZ1vXT3ejn5kyNxVaW23l6Lc4J_xchkBNxGYoFAIdHP5x2b";
 
     this.countryArticlesUrl =
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=b64e0e0376d04458b78457b0c373a1cb";
+      "https://api.currentsapi.services/v1/search?keywords=india&language=en&apiKey=vkZ1vXT3ejn5kyNxVaW23l6Lc4J_xchkBNxGYoFAIdHP5x2b";
 
-    this.trendingArticlesUrl =
-      "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b64e0e0376d04458b78457b0c373a1cb";
+    this.worldNewsURL =
+      "https://api.currentsapi.services/v1/search?keywords=world&language=en&apiKey=vkZ1vXT3ejn5kyNxVaW23l6Lc4J_xchkBNxGYoFAIdHP5x2b";
   }
+
+  handleSearch = (search) => {
+    if (search !== "") {
+      console.log(search);
+      var searchUrl =
+        "https://api.currentsapi.services/v1/search?keywords=" +
+        search +
+        "&language=en&apiKey=vkZ1vXT3ejn5kyNxVaW23l6Lc4J_xchkBNxGYoFAIdHP5x2b";
+      fetch(searchUrl)
+        .then((res) => res.json())
+        .then((json) => {
+          this.setState({
+            isLoaded: true,
+            searchArticles: json.news,
+          });
+        });
+
+      this.setState({
+        selected: "search",
+      });
+    }
+  };
 
   componentDidMount() {
     fetch(this.url)
@@ -42,7 +65,7 @@ export default class App extends Component {
       .then((json) => {
         this.setState({
           isLoaded: true,
-          articles: json.articles,
+          articles: json.news,
         });
       });
 
@@ -52,7 +75,7 @@ export default class App extends Component {
         .then((json) => {
           this.setState({
             isLoaded: true,
-            techArticles: json.articles,
+            techArticles: json.news,
           });
         });
     }
@@ -61,16 +84,16 @@ export default class App extends Component {
       .then((json) => {
         this.setState({
           isLoaded: true,
-          countryArticles: json.articles,
+          countryArticles: json.news,
         });
       });
 
-    fetch(this.trendingArticlesUrl)
+    fetch(this.worldNewsURL)
       .then((res) => res.json())
       .then((json) => {
         this.setState({
           isLoaded: true,
-          trending: json.articles,
+          worldArticles: json.news,
         });
       });
   }
@@ -88,7 +111,8 @@ export default class App extends Component {
       articles,
       techArticles,
       countryArticles,
-      trending,
+      worldArticles,
+      searchArticles,
     } = this.state;
     var articlesToShow;
 
@@ -101,8 +125,11 @@ export default class App extends Component {
         articlesToShow = countryArticles;
         break;
 
-      case "usa":
-        articlesToShow = trending;
+      case "world":
+        articlesToShow = worldArticles;
+        break;
+      case "search":
+        articlesToShow = searchArticles;
         break;
       default:
         break;
@@ -138,7 +165,11 @@ export default class App extends Component {
 
       return (
         <div>
-          <AppBar linkClicked={this.handleClick} active={this.state.selected} />
+          <AppBar
+            linkClicked={this.handleClick}
+            active={this.state.selected}
+            search={this.handleSearch}
+          />
 
           <div className="main">
             <Carousel
@@ -146,15 +177,15 @@ export default class App extends Component {
               responsive={responsive}
               autoPlay
               swipeable
-              showDots={true}
+              showDots={false}
             >
               {articles.map((article) => (
                 <TopArticles
                   key={id++}
                   title={article.title}
-                  image={article.urlToImage}
+                  image={article.image}
                   url={article.url}
-                  source={article.source.name}
+                  category={article.category}
                 />
               ))}
             </Carousel>
@@ -165,9 +196,9 @@ export default class App extends Component {
                     <Articles
                       key={id++}
                       title={article.title}
-                      image={article.urlToImage}
+                      image={article.image}
                       url={article.url}
-                      source={article.source.name}
+                      category={article.category}
                     />
                   ))}
                 </div>

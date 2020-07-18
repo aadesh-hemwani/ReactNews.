@@ -37,10 +37,23 @@
 .menu {
   display: none;
 }
+.link {
+  cursor: pointer;
+}
 
 @media (max-width: 995px) {
   .nav-link {
     display: none;
+  }
+  .form__class {
+    display: none;
+  }
+  .form__classM {
+    list-style: none;
+  }
+  .search__iconM {
+    font-size: 1.2rem;
+    margin-left: 12px;
   }
   .hamburger {
     background-color: white;
@@ -87,6 +100,7 @@
   border-radius: 200px;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .mobileLinks:hover,
 .mobileLinks:active {
@@ -104,6 +118,7 @@
   margin-left: 50px;
   transform: translateY(2px);
   color: white;
+  list-style: none;
 }
 
 .listItem:first-child {
@@ -116,4 +131,13 @@
   transform: translateX(10px) translateY(5px);
   background-color: black;
   margin: 6px 0;
+}
+
+.form__class {
+  transform: translateY(5px);
+}
+
+.search__icon {
+  margin-left: 12px;
+  cursor: pointer;
 }

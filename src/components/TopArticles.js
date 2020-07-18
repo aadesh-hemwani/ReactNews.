@@ -14,7 +14,7 @@ export default class TopArticles extends Component {
           <div className="article1 col-md">
             <img className="top__image" src={this.props.image} alt="news" />
             <div className="color1"></div>
-            <div className="top__source">{this.props.source.name}</div>
+            <div className="top__source">{this.props.category}</div>
             <a href={this.props.url} className="top__title">
               {this.props.title}
             </a>
